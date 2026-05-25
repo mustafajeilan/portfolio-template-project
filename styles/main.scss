@@ -1,0 +1,235 @@
+@import './abstracts/base';
+@import './abstracts/variables';
+@import './abstracts/mixins';
+
+.main-wrapper {
+  max-width: 1200px;
+  min-width: 300px;
+  width: 90%;
+  margin-inline: auto;
+  height: fit-content;
+  padding-top: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  position: relative;
+}
+
+// header styles
+
+header {
+  margin-inline: auto;
+  width: 75%;
+  background: lighten($primary-color, 20%);
+  position: absolute;
+}
+
+header nav {
+  @include flex-container;
+}
+
+nav ul {
+  @include flex-container;
+}
+
+.navbar-links {
+  @include flex-container;
+  flex: 1;
+  font-size: calc(18px / $space);
+  font-family: monospace;
+  color: $secondary-color;
+}
+
+// main section styles
+main {
+  width: 100%;
+}
+
+// first row styles of the first section
+.first-section {
+  background-color: $primary-color;
+  color: $secondary-color;
+  max-width: 100%;
+}
+
+.first-row {
+  @include flex-container;
+  max-width: 100%;
+
+  & > div:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    gap: $space * 2;
+  }
+
+  img {
+    max-width: 100%;
+    width: 95%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 50%;
+    overflow-y: hidden;
+  }
+}
+
+.first-row h1 {
+  font-size: $space * 2.5;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.first-row p {
+  font-size: $space;
+  line-height: 1.6;
+}
+
+.first-row button {
+  color: $secondary-color;
+  background-color: rgb(2, 192, 2);
+  font-family: monospace;
+  border: 0;
+  border-radius: 2px;
+  box-shadow: 0px 5px 5px rgba(2, 192, 2, 0.5)
+}
+
+// second row styles of the first section
+.second-row {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  
+  h4 {
+    font-weight: 400;
+    font-family: monospace;
+  }
+
+  div {
+    @include flex-container;
+    gap: $space * 1.2;
+  }
+}
+
+
+// article section
+.second-section {
+  background: $secondary-color;
+  color: $primary-color;
+  width: 100%;
+  margin-inline: auto;
+  
+  @include flex-gap;
+}
+
+.heading {
+  text-align: center;
+
+  h2 {
+    font-weight: 800;
+    font-size: $space * 2;
+  }
+
+  p {
+    font-weight: 300;
+    font-size: $space * 1.2;
+  }
+}
+
+.work-1,
+.work-2,
+.work-3 {
+  @include flex-container;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  gap: $space;
+
+  h3 {
+    font-size: $space * 1.5;
+  }
+
+  p {
+    font-size: $space;
+  }
+
+  button {
+    font-size: $space;
+    color: $secondary-color;
+    border-radius: $space / 3;
+    border: none;
+  }
+}
+
+.button-1 {
+  background-color: orange;
+}
+
+.button-2 {
+  background-color: blue;
+}
+
+.button-3 {
+  background-color: cyan;
+}
+
+
+
+// third section styles
+.third-section {
+  background-color: $primary-color;
+  color: $secondary-color;
+  margin-inline: auto;
+
+  @include flex-gap;
+
+}
+
+.testimonials {
+  text-align: center;
+
+  h2 {
+    font-weight: 800;
+    font-size: $space * 2;
+  }
+
+  p {
+    font-weight: 300;
+    font-size: $space * 1.2;
+  }
+}
+
+.block-1,
+.block-2 {
+  @include flex-container;
+  position: relative;
+
+
+  .quote {
+    border: 1px solid white;
+    border-right: 0;
+    border-radius: $space / 3;
+
+    display: flex;
+    flex-direction: column;
+    gap: $space * 1.2;
+  }
+
+  .quote-image {
+    position: absolute;
+    top: -$space;
+    left: -$space;
+    width: $space * 2;
+    height: $space * 2;
+  }
+
+  .client {
+    display: flex;
+    align-items: center;
+    gap: $space / 0.5;
+  }
+}
