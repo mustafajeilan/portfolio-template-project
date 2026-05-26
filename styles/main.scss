@@ -233,3 +233,115 @@ main {
     gap: $space / 0.5;
   }
 }
+
+
+// section four styles
+.fourth-section {
+  background-color: $secondary-color;
+  color: $primary-color;
+  margin-inline: auto;
+
+  @include flex-gap;
+}
+
+.recent {
+  text-align: center;
+
+  h2 {
+    font-weight: 800;
+    font-size: $space * 2;
+  }
+
+  p {
+    font-weight: 300;
+    font-size: $space * 1.2;
+  }
+}
+
+.display {
+  @include flex-container;
+
+  .display-1,
+  .display-2 {
+    @include flex-gap;
+    gap: $space;
+    align-items: baseline;
+    margin-right: $space;
+    padding: $space;
+  }
+
+  button {
+    background-color: green;
+    color: white;
+    border: none;
+    padding-inline: 2rem;
+    padding-block: 0.8rem;
+    box-shadow: 5px 5px 8px rgba(0, 128, 0, 0.8);
+  }
+}
+
+
+// fifth section styles
+.fifth-section {
+  background-color: $primary-color;
+  color: $secondary-color;
+  margin-inline: auto;
+
+  @include flex-gap;
+  position: relative;
+
+  h2 {
+    font-weight: 800;
+    font-size: $space * 2;
+    text-align: center;
+  }
+
+  p {
+    font-weight: 300;
+    font-size: $space * 1.2;
+    text-align: center;
+    padding-inline: 5rem;
+  }
+}
+
+form {
+  margin-bottom: 2rem;
+  font-family: monospace;
+  font-size: $space * 1.2;
+
+  input[type="email"],
+  input[type="tel"] {
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+    padding-right: 6rem;
+    padding-left: 0.2rem;
+    margin-bottom: $space;
+    text-align: start;
+  }
+
+  input[type="textarea"] {
+    padding-right: 6rem;
+    padding-bottom: 5rem;
+    padding-left: 0.2rem;
+    padding-top: 0.2rem;
+  }
+
+}
+
+.get-started {
+  background-color: lighten(green, 10%);
+  color: white;
+  padding-inline: 7.2rem;
+  border: none;
+}
+
+footer {
+  background: lighten($primary-color, 20%);
+  color: $secondary-color;
+  width: 92%;
+  text-align: center;
+  position: absolute;
+  bottom: 49px;
+  font-size: $space * 1.5;
+  font-family: monospace;
+}
